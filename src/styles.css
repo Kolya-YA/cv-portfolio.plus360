@@ -1,0 +1,107 @@
+@font-face {
+    font-family: "RooneySans";
+    src: url('/fonts/RooneySans-Regular.woff2') format('woff2'),
+         url('/fonts/RooneySans-Regular.woff') format('woff');
+    font-weight: 400 900;
+    font-display: swap;
+}
+
+:root {
+    --clr-neutral-100: hsl(261, 0%, 100%);
+    --clr-neutral-200: hsl(251, 8%, 97%);
+    --clr-neutral-600: hsl(251, 25%, 37%);
+    --clr-neutral-800: hsl(261, 82%, 7%);
+    --clr-neutral-900: hsl(261, 100%, 5%);
+
+    --clr-heading: var(--clr-neutral-100);
+    --clr-body: var(--clr-neutral-200);
+    --clr-body-bg: var(--clr-neutral-800);
+    --clr-accent-400: var(--clr-neutral-600);
+
+    --ff-base: "RooneySans", sans-serif;
+
+    --fw-regular: 400;
+    --fw-semibold: 700;
+    --fw-bold: 900;
+
+    --fs-400: 1rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.5rem;
+    --fs-700: 2rem;
+    --fs-800: 2.5rem;
+    --fs-900: 3rem;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--clr-heading);
+    font-weight: var(--fw-bold);
+    line-height: 1.1;
+    text-wrap: balance;
+}
+
+p, li {
+    text-wrap: pretty;
+    max-width: 65ch;
+}
+
+[role="list"] {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+    margin: 0;
+    font-family: var(--ff-base);
+    background-color: var(--clr-body-bg);
+    color: var(--clr-body);
+    line-height: 1.6;
+    row-gap: 2rem;
+}
+
+.base-layout {
+    --max-width: 1180px;
+    --padding: 1rem;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns:
+        minmax(var(--padding), 1fr)
+        min(var(--max-width), 100% - (var(--padding) * 2))
+        minmax(var(--padding), 1fr);
+
+    & > * {
+        grid-column: 2 / 3;
+    }
+
+    & > .full-width {
+        grid-column: 1 / -1;
+    }
+}
+
+.visually-hidden {
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    border-width: 0;
+}

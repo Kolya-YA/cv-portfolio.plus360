@@ -1,0 +1,105 @@
+<header>
+    <div class="header__wrapper">
+        <h1 class="name">
+            <a href="/">
+                <span class="name__first">Nikolay</span>
+                <span class="name__last">Kolomyytsev</span>
+                <span class="name__title">web-developer</span>
+            </a>
+        </h1>
+        
+        <nav>
+            <ul>
+                <li><a href="#">CV</a></li>
+                <li><a href="#">Portfolio</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<style>
+    header {
+        container-type: inline-size;
+        container-name: header;
+        co
+    }
+
+    .header__wrapper {
+        display: grid;
+
+        @container header (width > 600px) {
+            grid-template-columns: 1fr 1fr;
+        }
+        gap: 1rem;
+    }
+    
+    .name {
+        display: grid;
+        gap: 0.5rem;
+        
+        a {
+            display: contents;
+            color: currentColor;
+
+            & > * {
+                text-decoration-line: underline;
+                text-decoration-color: var(--clr-accent-400);
+                text-decoration-thickness: 0.15em;
+            }
+        }
+
+        .name__first {
+            font-size: 5rem;
+        }
+
+        .name__last {
+            font-size: 2.8rem;
+        }
+            
+        .name__title {
+            font-size: 2.5rem;
+        }
+    }
+
+    nav {
+        container-type: inline-size;
+        container-name: nav;
+    }
+
+    ul {
+        --nav-width: 360px;
+        list-style: none;
+        margin: 0;
+        padding-block: 0.5rem 0;
+        padding-inline: 0;
+        min-height: 100%;
+        display: grid;
+        gap: 0.5rem;        
+
+        @container header (width < 600px) {
+            @container nav (width > 360px) {
+            /* @container nav (width > var(--nav-width)) { */
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    
+        a {
+            display: grid;
+            align-items: end;
+            min-height: 100%;
+            padding: 1rem;
+            text-decoration: none;
+            line-height: 1;
+            color: currentColor;
+            background-color: var(--clr-accent-400);
+            border-radius: .2rem;
+            transition: color 0.3s;
+
+            &:hover,
+            &:focus-visible {
+                color: var(--clr-accent-400);
+            }
+        }
+    }
+
+</style>
