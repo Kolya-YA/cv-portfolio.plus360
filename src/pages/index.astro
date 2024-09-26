@@ -4,19 +4,41 @@ const title = 'About';
 ---
 
 <PrimaryLayout>
-	<article>
-		<h2>{ title }</h2>
-		<p>
-			Hello, I'm Nikolay Kolomyytsev, a web developer from Berlin. I have a passion for web development and love to create websites and web applications. I have experience in building websites using modern technologies like React, Next.js, and Astro.	
-		</p>
-		<p>
-			When I'm not coding, I enjoy reading books, playing video games, and watching movies. I also love to travel and explore new places. I'm always looking for new opportunities to learn and grow as a developer.
-		</p>
-		<p>
-			If you have a project you'd like to discuss or need help with your website, feel free to contact me. I'm always open to new challenges and would love to help you bring your ideas to life.
-		<p>
-			Thanks for visiting my website, and I hope to hear from you soon!
-		</p>
-
-	</article>
+	<main>
+		<div class="filler"></div>
+		<article>
+			<h2>Professional Summary</h2>
+			<p>Passionate and versatile Full Stack Web Developer with over 3 years of experience in creating accessible and inclusive web experiences. Skilled in React for professional projects and static generators like Hugo for personal work. Committed to continuous learning and exploring new technologies. Seeking challenging opportunities to contribute to innovative web development projects.</p>
+			
+			<h2>Technical Skills</h2>
+			<ul>
+				<li><strong>Programming Languages:</strong> JavaScript, TypeScript, HTML5, CSS3</li>
+				<li><strong>Frameworks & Libraries:</strong> ReactJS, Node.js, Express.js, Tailwind CSS</li>
+				<li><strong>Databases:</strong> SQL, MongoDB</li>
+				<li><strong>Tools & Technologies:</strong> Git, GitHub, GraphQL, Hugo</li>
+				<li><strong>Other:</strong> RESTful APIs, Responsive Design, Web Accessibility, SEO Optimization</li>
+			</ul>
+		</article>			
+	</main>
 </PrimaryLayout>
+
+<style>
+	main {
+		container-type: inline-size;
+		display: grid;
+		gap: 0.5rem;
+		grid-template-columns: minmax(0, 1fr) auto;
+	}
+
+	.filler {
+		background-color: var(--clr-accent-400);
+		background: linear-gradient(90deg, var(--clr-accent-400) 10%, transparent);
+	}
+
+	article {
+		padding: 1rem;
+		background-color: var(--clr-accent-400);
+	}
+
+
+</style>
