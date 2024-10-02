@@ -1,36 +1,41 @@
 <footer class="full-width">
     <div class="base-layout">
-        <p class="legal">
+        <div class="legal">
+            NK &copy; 2024
             <a href="#">Impressum</a>
-                NK &copy; 2024
-        </p>
-        <ul class="links">
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">LinkedIn</a></li>
+        </div>
+        <ul class="links" role="list">
+            <li>
+                <a target="_blank" href="https://github.com/Kolya-YA">GitHub</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://www.linkedin.com/in/nikolay-kolomyytsev/"> LinkedIn</a>
+            </li>
         </ul>
     </div>
 </footer>
 
 <style>
-    footer {
+    footer > .base-layout {
+        padding: 1rem;
         display: flex;
         gap: 1rem;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
         background-color: var(--clr-neutral-600);
     }
 
-
-
     ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        gap: .5rem;
     }
 
     a {
-        text-decoration: none;
+        text-decoration-line: underline;
+        text-decoration-style: dotted;
+        text-underline-offset: 0.2em;
         color: currentColor;
 
         &:hover,

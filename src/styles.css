@@ -8,21 +8,23 @@
 
 :root {
     --clr-neutral-100: hsl(261, 0%, 100%);
-    --clr-neutral-200: hsl(251, 8%, 97%);
+    --clr-neutral-200: hsl(251, 8%, 96%);
+    --clr-neutral-300: hsl(251, 12%, 86%);
     --clr-neutral-600: hsl(251, 25%, 37%);
     --clr-neutral-800: hsl(261, 82%, 7%);
     --clr-neutral-900: hsl(261, 100%, 5%);
 
-    --clr-heading: var(--clr-neutral-100);
-    --clr-body: var(--clr-neutral-200);
+    --clr-heading: var(--clr-neutral-200);
+    --clr-body: var(--clr-neutral-300);
     --clr-body-bg: var(--clr-neutral-800);
-    --clr-accent-400: var(--clr-neutral-600);
+    --clr-block-bg: var(--clr-neutral-600);
+    --clr-accent-400: var(--clr-neutral-900);
 
-    --ff-base: "RooneySans", sans-serif;
+    --ff-base: "RooneySans", system-ui, sans-serif;
 
     --fw-regular: 400;
-    --fw-semibold: 700;
-    --fw-bold: 900;
+    --fw-semibold: 600;
+    --fw-bold: 800;
 
     --fs-400: 1rem;
     --fs-500: 1.25rem;
@@ -36,11 +38,11 @@
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
+h1, h2, h3, h4, p {
+    margin-block-end: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
     color: var(--clr-heading);
     font-weight: var(--fw-bold);
     line-height: 1.1;
@@ -72,7 +74,7 @@ body {
     background-color: var(--clr-body-bg);
     color: var(--clr-body);
     line-height: 1.6;
-    row-gap: 2rem;
+    row-gap: 1.5rem;
 }
 
 .base-layout {
