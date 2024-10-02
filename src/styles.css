@@ -1,10 +1,10 @@
-@font-face {
+/* @font-face {
     font-family: "RooneySans";
     src: url('/fonts/RooneySans-Regular.woff2') format('woff2'),
          url('/fonts/RooneySans-Regular.woff') format('woff');
     font-weight: 400 900;
     font-display: swap;
-}
+} */
 
 :root {
     --clr-neutral-100: hsl(261, 0%, 100%);
