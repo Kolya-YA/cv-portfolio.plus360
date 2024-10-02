@@ -1,0 +1,48 @@
+---
+import PrimaryLayout from "../layouts/PrimaryLayout.astro";
+const title = 'About';
+---
+
+<PrimaryLayout>
+	<main>
+		<div class="filler"></div>
+		<article>
+			<h2>Resume / Curriculum Vitae (CV)</h2>
+			<p>Text and PDF file will be available soon.</p>
+			<div class="pdf-container">
+			
+				<object
+				data="/path/to/your/document.pdf"
+				type="application/pdf"
+				width="100%"
+				height="100%"
+				class="pdf-viewer"
+			>
+				<p>
+				It appears your browser doesn't support embedded PDFs.
+				<a href="/path/to/your/document.pdf">Click here to download the PDF</a>.
+				</p>
+			</object>
+			</div>
+		</article>			
+	</main>
+</PrimaryLayout>
+
+<style>
+	main {
+		container-type: inline-size;
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto;
+	}
+
+	.filler {
+		background: linear-gradient(90deg, var(--clr-block-bg) 10%, transparent 95%);
+	}
+
+	article {
+		padding: 1rem;
+		background-color: var(--clr-block-bg);
+	}
+
+
+</style>
