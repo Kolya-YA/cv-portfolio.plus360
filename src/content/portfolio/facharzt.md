@@ -1,13 +1,12 @@
 ---
-title: "Moviemap.me"
-description: "Movie tracker and AI powered recomendation app"
+title: "Facharzt für Orthopädie"
+description: "Praxis site"
 github: '#'
-previewURL: '#'
+previewURL: 'https://arztpraxis.plus360.eu/'
 tags: 
-    - React
-    - Express
-    - Mongoose
-    - Tailwind
+    - Hugo
+    - SCSS
+    - JavaScript
 ---
 
 ### Project description 02

@@ -1,13 +1,12 @@
 ---
-title: "Moviemap.me"
-description: "Movie tracker and AI powered recomendation app"
+title: "GurFoto SE"
+description: "Photo agency service and portfolio site"
 github: '#'
-previewURL: '#'
+previewURL: 'https://moviemap.me/'
 tags: 
-    - React
-    - Express
-    - Mongoose
-    - Tailwind
+    - Hugo
+    - SCSS
+    - JavaScript
 ---
 
 ### Project description 02
