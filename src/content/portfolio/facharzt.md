@@ -1,14 +1,18 @@
 ---
-title: "Facharzt für Orthopädie"
-description: "Praxis site"
-github: '#'
-previewURL: 'https://arztpraxis.plus360.eu/'
+title: "Doctor’s office"
+description: "A clean, responsive website template designed for doctor’s offices"
 tags: 
     - Hugo
     - SCSS
     - JavaScript
+links:
+    github: 'https://github.com/Kolya-YA/md-type'
+    preview: 'https://arztpraxis.plus360.eu/'
+gallery:
+    - file: 'arztpraxis.plus360.eu.png'
+      alt: 'Desktop preview'
+    - file: 'arztpraxis.plus360.eu.mob.png'
+      alt: 'Mobile preview'
 ---
 
-### Project description 02
-
-dil;hjqel;hk elri;jgl;qe jrgl qel;irglqke;jrg juq'pwejfsndv,xc herlg lk; glerj g/asfgj qeirjgh/p'qehj r/lghj qery q;'e
+A sleek and professional website template designed for doctor’s offices, offering a clean and modern design tailored to healthcare needs. This template features user-friendly navigation, essential sections for showcasing services, doctor profiles, patient information, and contact details. Built with responsive design, it ensures seamless functionality across devices, providing an optimal user experience for patients.

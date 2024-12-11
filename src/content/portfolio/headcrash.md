@@ -1,14 +1,20 @@
 ---
-title: "Headcrash"
-description: ""
-github: '#'
-previewURL: '#'
+title: "./HeadCrash"
+description: "Adaptive Hugo-based website for a data recovery service company"
 tags: 
     - Hugo
     - SCSS
     - JS
+links:
+    github: 'https://github.com/Kolya-YA/headcrash-net'
+    preview: 'https://headcrash.net/'
+gallery:
+    - file: 'headcrash.net.png'
+      alt: 'Desktop preview'
+    - file: 'headcrash.net.tab.png'
+      alt: 'Tablet preview'
+    - file: 'headcrash.net.mob.png'
+      alt: 'Mobile preview'
 ---
 
-### Project description 02
-
-dil;hjqel;hk elri;jgl;qe jrgl qel;irglqke;jrg juq'pwejfsndv,xc herlg lk; glerj g/asfgj qeirjgh/p'qehj r/lghj qery q;'e
+An adaptive static website for a data recovery service company, built with Hugo for fast performance and reliability. The site features a responsive design, clear service descriptions, and a professional layout to provide an optimal user experience across all devices.

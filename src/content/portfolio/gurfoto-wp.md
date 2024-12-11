@@ -1,13 +1,13 @@
 ---
 title: "GurFoto (old)"
 description: "Photo agency service and portfolio site"
-links:
-    github: '#'
-    preview: '#'
 tags: 
     - WordPress
     - SCSS
     - JavaScript
+links:
+    github: '#'
+    preview: '#'
 gallery:
     - file: 'gurfoto-old.jpeg'
       alt: 'Desktop preview'
