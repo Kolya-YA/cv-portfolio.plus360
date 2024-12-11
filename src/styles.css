@@ -58,6 +58,10 @@ p, li {
     max-width: 65ch;
 }
 
+a:not([class]) {
+    color: currentColor
+}
+
 [role="list"] {
     list-style: none;
     margin: 0;
