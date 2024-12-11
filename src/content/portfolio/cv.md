@@ -1,13 +1,13 @@
 ---
 title: "Portfolio & CV"
 description: "Fast, simple & static"
-links:
-    github: '#'
-    preview: '#'
 tags: 
     - Astro
-    - JS
+    - JavaScript
     - CSS
+links:
+    github: 'https://github.com/Kolya-YA/cv-portfolio.plus360'
+    preview: 'https://portfolio.plus360.eu/'
 ---
 
-dil;hjqel;hk elri;jgl;qe jrgl qel;irglqke;jrg juq'pwejfsndv,xc herlg lk; glerj g/asfgj qeirjgh/p'qehj r/lghj qery q;'e
+A modern and dynamic CV and portfolio website built with Astro, showcasing a clean, responsive design and optimized performance. The site features an intuitive layout to highlight skills, experience, and projects, with smooth navigation and fast load times. It seamlessly integrates personal branding and professional achievements, offering a polished online presence for potential clients and employers.

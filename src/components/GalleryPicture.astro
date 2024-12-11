@@ -1,16 +1,18 @@
 ---
-import { getImage } from "astro:assets";
-import Picture from "astro/components/Picture.astro";
+import { Picture } from "astro:assets";
+const images = import.meta.glob<{ default: ImageMetadata }>(
+	"/src/images/*.{jpeg,jpg,png,gif}",
+);
 
 const { file, alt } = Astro.props;
-// const fullSrc = `../images/${src}`;
-// import pic from fullSrc;
-const pic = await import(`../images/${file}`);
-const fullSrc = pic.default;
+const fullPath = `/src/images/${file}`;
+if (!images[fullPath]) {
+	throw new Error(`"${fullPath}" does not exist in glob`);
+}
 ---
 
 <Picture
-    src={fullSrc}
+    src={images[fullPath]()}
     fit="cover"
     position="top"
     formats={['avif', 'webp']}
