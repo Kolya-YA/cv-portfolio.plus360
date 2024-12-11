@@ -29,21 +29,23 @@ const { frontmatter } = Astro.props;
     }
 </style>
 <style>
+article {
+    container-type: inline-size;
+    container-name: article;
+}
+
 .wrapper {
-		container-type: inline-size;
-		display: grid;
-        gap: 1rem;
-		grid-template-columns: 12em auto;
+    display: grid;
+    gap: 1rem;
 
-        .filler {
-            background: linear-gradient(90deg, var(--clr-block-bg) 10%, transparent 95%);
-        }
+    @container article (width > 600px) {
+        grid-template-columns: 12em auto;
+    }
 
-        .content {
-            border-radius: .2rem;
-            padding: 1rem;
-            background-color: var(--clr-block-bg);
-        }
-	}
-
+    .content {
+        border-radius: .2rem;
+        padding: 1rem;
+        background-color: var(--clr-block-bg);
+    }
+}
 </style>
