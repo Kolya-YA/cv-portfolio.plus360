@@ -1,14 +1,20 @@
 ---
-title: "GurFoto"
+title: "GurFoto (old)"
 description: "Photo agency service and portfolio site"
-github: '#'
-previewURL: '#'
+links:
+    github: '#'
+    preview: '#'
 tags: 
     - WordPress
     - SCSS
     - JavaScript
+gallery:
+    - file: 'gurfoto-old.jpeg'
+      alt: 'Desktop preview'
+    - file: 'gurfoto-old.gsv.jpeg'
+      alt: 'Tablet preview'
+    - file: 'gurfoto-old.mobile.jpeg'
+      alt: 'Mobile preview'
 ---
 
-### Project description 02
-
-dil;hjqel;hk elri;jgl;qe jrgl qel;irglqke;jrg juq'pwejfsndv,xc herlg lk; glerj g/asfgj qeirjgh/p'qehj r/lghj qery q;'e
+Photo agency and portfolio website featuring an extensive photo gallery, a dedicated section for Google Street View tours, and a classic virtual tours gallery. Built on WordPress with a fully custom theme, the site also included a large section with original articles and photo tutorials. It has since been updated to a new static version.

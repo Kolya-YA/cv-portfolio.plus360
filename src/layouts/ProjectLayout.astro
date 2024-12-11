@@ -1,0 +1,49 @@
+---
+import PrimaryLayout from "./PrimaryLayout.astro";
+import TagList from "../components/TagList.astro";
+import ProjectGallery from "../components/ProjectGallery.astro";
+import ProjectLinks from "../components/ProjectLinks.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<PrimaryLayout>
+    <main>
+        <article>
+            <h2>{frontmatter.title}</h2>
+            <TagList tags={frontmatter.tags} />
+            <h3>{frontmatter.description}</h3>
+            <ProjectGallery gallery={frontmatter.gallery} />
+            <div class="wrapper">
+                <ProjectLinks links={frontmatter.links} class="links"/>
+                <div class="content">
+                    <slot />
+                </div>
+        </article>
+    </main>
+</PrimaryLayout>
+
+<style is:global>
+    article > *:not(:last-child) {
+        margin-block: 1em;
+    }
+</style>
+<style>
+.wrapper {
+		container-type: inline-size;
+		display: grid;
+        gap: 1rem;
+		grid-template-columns: 12em auto;
+
+        .filler {
+            background: linear-gradient(90deg, var(--clr-block-bg) 10%, transparent 95%);
+        }
+
+        .content {
+            border-radius: .2rem;
+            padding: 1rem;
+            background-color: var(--clr-block-bg);
+        }
+	}
+
+</style>

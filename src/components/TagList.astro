@@ -1,0 +1,28 @@
+---
+const { tags } = Astro.props;
+---
+
+<ul>
+    {tags?.map(tag => (
+        <li>{tag}</li>
+    ))}
+</ul>
+
+<style>
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: .5rem;
+    justify-content: flex-end;
+    align-items: start;
+    font-size: .75rem;
+
+    li {
+        background-color: hsl(0 0% 100% / 50%);
+        padding: .15rem .4rem .12rem;
+        border-radius: .25rem;
+    }
+}
+</style>

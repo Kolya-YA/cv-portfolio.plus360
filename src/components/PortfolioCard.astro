@@ -1,0 +1,44 @@
+---
+import TagList from "./TagList.astro"
+
+const { pCard } = Astro.props
+---
+
+<li class="card">
+    <a href={`/${pCard.collection}/${pCard.slug}`}>
+        <TagList tags={pCard.data.tags} />
+        <p class="card__title">{pCard.data.title}</p>
+        <p>{pCard.data.description || "More info..."}</p>
+    </a>
+</li>
+
+<style>
+.card {
+    aspect-ratio: 4 / 2;
+    background-color: hsl(0 0% 100% / 65%);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 0 1rem rgb(0 0 0 / 50%);
+    
+    a {
+        background-color: hsl(0 40% 70% / 25%);
+        min-height: 100%;
+        display: grid;
+        gap: .5rem;
+        grid-template-rows: 1fr auto auto;
+        padding: 1rem;
+        color: var(--clr-block-bg);
+        text-decoration: none;
+
+        & > * {
+            margin: 0;
+        }
+        
+        .card__title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+    }
+}
+</style>

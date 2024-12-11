@@ -1,0 +1,24 @@
+---
+import GalleryPicture from "./GalleryPicture.astro";
+
+const { gallery } = Astro.props;
+---
+
+<ul>
+    {gallery?.length && gallery.map(({ file, alt }) => (
+        <li>
+            <GalleryPicture file={file} alt={alt} />
+        </li>
+    ))}
+</ul>
+
+<style>
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: var(--main-gap, 1rem);
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+</style>

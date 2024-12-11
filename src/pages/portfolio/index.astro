@@ -1,8 +1,9 @@
 ---
 import { getCollection } from 'astro:content'
 import PrimaryLayout from "../../layouts/PrimaryLayout.astro";
+import PortfolioCard from '../../components/PortfolioCard.astro';
 import ExtLinkSvg from '../../components/ExtLinkSvg.astro';
-import './portfolio.css'
+import './_portfolio.css'
 
 const title = 'Portfolio'
 const projects = await getCollection('portfolio')
@@ -12,21 +13,7 @@ const projects = await getCollection('portfolio')
 	<main class="portfolio">
         <h2>{title}</h2>
         <ul class="portfolio__list" role="list">
-            {projects.map(p => {
-                return (
-                    <li class="project">
-                        <a href="#">
-                            <ul class="project__tags">
-                                {p.data.tags?.map(t => (
-                                    <li>{t}</li>
-                                ))}
-                            </ul>
-                            <p class="project__title">{p.data.title}</p>
-                            <p>{p.data.description || "More info..."}</p>
-                        </a>
-                    </li>
-                    )
-            })}
+            {projects.map(p => <PortfolioCard pCard={p} />)}
         </ul>
 	</main>
 </PrimaryLayout>

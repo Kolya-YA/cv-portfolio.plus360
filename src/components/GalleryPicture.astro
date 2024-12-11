@@ -1,0 +1,20 @@
+---
+import { getImage } from "astro:assets";
+import Picture from "astro/components/Picture.astro";
+
+const { file, alt } = Astro.props;
+// const fullSrc = `../images/${src}`;
+// import pic from fullSrc;
+const pic = await import(`../images/${file}`);
+const fullSrc = pic.default;
+---
+
+<Picture
+    src={fullSrc}
+    fit="cover"
+    position="top"
+    formats={['avif', 'webp']}
+    width={320}
+    height={240}
+    alt={alt}
+/>

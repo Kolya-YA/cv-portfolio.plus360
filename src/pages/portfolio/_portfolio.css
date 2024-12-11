@@ -1,0 +1,14 @@
+.portfolio {
+    padding: 1rem;
+    background-color: var(--clr-block-bg);
+
+    .portfolio__list {
+        list-style: none;
+        margin: 0;
+        margin-block-start: 1rem;
+        padding: 0;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
