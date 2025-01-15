@@ -6,7 +6,10 @@ import Footer from '../components/Footer.astro';
 const { frontmatter } = Astro.props;
 let title = frontmatter?.title;
 title = `${title ? `${title} | ` : ''}Nikolay Kolomyytsev | Portfolio & CV`;
+const description = frontmatter?.description ?? "Nikolay Kolomyytsev's portfolio and CV"
 ---
+
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -14,7 +17,7 @@ title = `${title ? `${title} | ` : ''}Nikolay Kolomyytsev | Portfolio & CV`;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{ title }</title>
-		<meta name="description" content={frontmatter.description ?? "Nikolay Kolomyytsev's portfolio and CV"} />
+		<meta name="description" content={description} />
 	</head>
 	<body class="base-layout">
 		<Header />
