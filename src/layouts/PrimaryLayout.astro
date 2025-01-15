@@ -3,7 +3,9 @@ import '../styles.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const { title = "Portfolio & CV | Nikolay Kolomyytsev" } = Astro.props;
+const { frontmatter } = Astro.props;
+let title = frontmatter?.title;
+title = `${title ? `${title} | ` : ''}Nikolay Kolomyytsev | Portfolio & CV`;
 ---
 <html lang="en">
 	<head>
@@ -12,6 +14,7 @@ const { title = "Portfolio & CV | Nikolay Kolomyytsev" } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{ title }</title>
+		<meta name="description" content={frontmatter.description ?? "Nikolay Kolomyytsev's portfolio and CV"} />
 	</head>
 	<body class="base-layout">
 		<Header />
