@@ -1,16 +1,41 @@
 ---
-import GalleryPicture from "./GalleryPicture.astro";
+import { getImage, Picture } from "astro:assets";
 
 const { gallery } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+	"/src/images/*.{jpeg,jpg,png,gif}",
+);
 ---
 
-<ul>
-    {gallery?.length && gallery.map(({ file, alt }) => (
-        <li>
-            <GalleryPicture file={file} alt={alt} />
-        </li>
-    ))}
+<ul class="project-gallery">
+    {gallery?.length && gallery.map(async ({ file, alt }) => {
+        const fullPath = `/src/images/${file}`;
+        const fullPic = await getImage({
+			src: images[fullPath](),
+			alt,
+		});
+        return (
+            <li data-full-src={fullPic.src} data-alt={fullPic.attributes.alt}>
+                <Picture
+                    src={images[fullPath]()}
+                    fit="cover"
+                    position="top"
+                    formats={['avif', 'webp']}
+                    width={320}
+                    height={240}
+                    alt={alt}
+                />
+            </li>
+        )
+    })}
 </ul>
+
+<dialog class="project-gallery__dialog">
+    <button class="project-gallery__dialog__close">Close</button>
+    <img id="gallery-dialog-img" />
+</dialog>
+
+<script is:inline src="/src/scripts/project-gallery.js" />
 
 <style>
 ul {
