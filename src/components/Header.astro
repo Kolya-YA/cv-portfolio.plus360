@@ -11,12 +11,16 @@ import ExtLinkSvg from "./ExtLinkSvg.astro";
                 <span class="name__title">web-developer</span>
             </a>
         </h1>
-        
+
         <nav>
             <ul>
-                <li><a href="https://docs.google.com/document/d/1nvcHyyC7EgDRjdxzbxnbQUtI50-bjoz6oYXD4xOuCOo/preview" target="_blank"><span>CV <ExtLinkSvg size="28" /></span></a></li>
-                <!-- <li><a href="https://docs.google.com/document/d/1nvcHyyC7EgDRjdxzbxnbQUtI50-bjoz6oYXD4xOuCOo/export?format=pdf" target="_blank"><span>CV download<ExtLinkSvg size="28" /></span></a></li> -->
-                <li><a href="/portfolio/">Portfolio</a></li>
+                <li>
+                    <a
+                        href="https://docs.google.com/document/d/1nvcHyyC7EgDRjdxzbxnbQUtI50-bjoz6oYXD4xOuCOo/preview"
+                        target="_blank"><span>View CV <ExtLinkSvg size="28" /></span>
+                    </a>
+                </li>
+                <li><a href="/portfolio/">See My Projects</a></li>
             </ul>
         </nav>
     </div>
@@ -36,11 +40,11 @@ import ExtLinkSvg from "./ExtLinkSvg.astro";
         }
         gap: 1rem;
     }
-    
+
     .name {
         display: grid;
         gap: 0.5rem;
-        
+
         a {
             display: contents;
             color: currentColor;
@@ -59,7 +63,7 @@ import ExtLinkSvg from "./ExtLinkSvg.astro";
         .name__last {
             font-size: 2.8rem;
         }
-            
+
         .name__title {
             font-size: 2.5rem;
         }
@@ -78,14 +82,14 @@ import ExtLinkSvg from "./ExtLinkSvg.astro";
         padding-inline: 0;
         min-height: 100%;
         display: grid;
-        gap: 1rem;        
+        gap: 1rem;
 
         @container header (width < 600px) {
             @container nav (width > 360px) {
                 grid-template-columns: 1fr 1fr;
             }
         }
-    
+
         a {
             display: grid;
             align-items: end;
@@ -97,7 +101,7 @@ import ExtLinkSvg from "./ExtLinkSvg.astro";
             text-decoration: none;
             color: currentColor;
             background-color: var(--clr-block-bg);
-            border-radius: .2rem;
+            border-radius: 0.2rem;
             transition: color 0.3s;
 
             &:hover,
@@ -106,5 +110,4 @@ import ExtLinkSvg from "./ExtLinkSvg.astro";
             }
         }
     }
-
 </style>
