@@ -1,37 +1,19 @@
 ---
+import { getEntry } from "astro:content";
 import PrimaryLayout from "../layouts/PrimaryLayout.astro";
-const title = 'Home';
+
+const homePageData = await getEntry("home", "homepage");
+const { Content } = await homePageData.render();
+const { title, description } = homePageData.data;
+
+// const title = 'Home';
 ---
 
 <PrimaryLayout>
 	<main>
 		<div class="filler"></div>
 		<article>
-			<h2>Professional Summary</h2>
-			<p>Passionate and versatile Full Stack Web Developer with over 3 years of experience in creating accessible and inclusive web experiences. Skilled in React for professional projects and static generators like Hugo for personal work. Committed to continuous learning and exploring new technologies. Seeking challenging opportunities to contribute to innovative web development projects.</p>
-			
-			<h2>Technical Skills</h2>
-			<ul>
-				<li><strong>Programming Languages:</strong> JavaScript, TypeScript, HTML5, CSS3</li>
-				<li><strong>Frameworks & Libraries:</strong> ReactJS, Node.js, Express.js, Tailwind CSS</li>
-				<li><strong>Databases:</strong> SQL, MongoDB</li>
-				<li><strong>Tools & Technologies:</strong> Git, GitHub, GraphQL, Hugo</li>
-				<li><strong>Other:</strong> RESTful APIs, Responsive Design, Web Accessibility, SEO Optimization</li>
-			</ul>
-			<h2>Cerificates</h2>
-			<ul>
-				<li>
-					<a href="./images/certificate-fullstack.png" target="_blank">
-						FullStackOpen (University of Helsinki)
-					</a>
-				</li>
-				
-				<li>
-					<a href="./pdf/certificate_Nikolay_Kolomyytsev.pdf" target="_blank">
-						Full Stack Web and App Development (WBS Coding School, Berlin)
-					</a>
-				</li>
-			</ul>
+			<Content />
 		</article>			
 	</main>
 </PrimaryLayout>
