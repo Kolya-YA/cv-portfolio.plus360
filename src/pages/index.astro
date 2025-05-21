@@ -5,11 +5,16 @@ import PrimaryLayout from "../layouts/PrimaryLayout.astro";
 const homePageData = await getEntry("home", "homepage");
 const { Content } = await homePageData.render();
 const { title, description } = homePageData.data;
+const code = homePageData.rendered.html;
 ---
 
 <PrimaryLayout title={title} description={description}>
 	<main>
-		<div class="filler"></div>
+		<div class="filler">
+			<div class="filler__code" aria-hidden='true'>
+				<pre><code>{ code }</code></pre>
+			</div>
+		</div>
 		<article>
 			<Content />
 		</article>
@@ -25,6 +30,26 @@ const { title, description } = homePageData.data;
 
 	.filler {
 		background: linear-gradient(90deg, var(--clr-block-bg) 10%, transparent 95%);
+		padding: 1rem;
+		perspective: 800px;
+
+		.filler__code {
+			padding: 1rem;
+			overflow: clip;
+			background-color: var(--clr-body-bg);
+			color: darkgreen;
+			font-family: var(--font-mono);
+			font-size: 0.8rem;
+			line-height: 1.2;
+			white-space: pre-wrap;
+			border-radius: 0.2rem;
+			transform: rotate3d(0, 1, -0.3, 14deg);
+			transform-origin: left;
+
+			@media (width < 800px) {
+				display: none;
+			}
+		}
 	}
 
 	article {
