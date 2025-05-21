@@ -1,6 +1,10 @@
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
-// https://astro.build/config
 export default defineConfig({
-    assets: true
+    site: 'https://portfolio.plus360.eu/',
+    assets: true,
+    integrations: [
+        sitemap(),
+    ],
 });

@@ -5,11 +5,12 @@ import PortfolioCard from '../../components/PortfolioCard.astro';
 import ExtLinkSvg from '../../components/ExtLinkSvg.astro';
 import './_portfolio.css'
 
-const title = 'Portfolio'
+const title = 'Portfolio. My projects.'
+
 const projects = await getCollection('portfolio')
 ---
 
-<PrimaryLayout>
+<PrimaryLayout title={title}>
 	<main class="portfolio">
         <h2>{title}</h2>
         <ul class="portfolio__list" role="list">
