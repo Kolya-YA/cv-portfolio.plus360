@@ -1,6 +1,6 @@
 ---
-title: "Nikolay Kolomyytsev - Full Stack Web Developer"
-description: "Project portfolio of Nikolay Kolomyytsev, a Full Stack Web Developer with a focus on creating accessible and inclusive web experiences."
+title: "Full Stack Web Developer"
+description: "Projects and portfolio of Nikolay Kolomyytsev, a Full Stack Web Developer with a focus on creating accessible and inclusive web experiences."
 ---
 
 ## Professional Summary

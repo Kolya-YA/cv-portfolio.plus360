@@ -5,16 +5,14 @@ import PrimaryLayout from "../layouts/PrimaryLayout.astro";
 const homePageData = await getEntry("home", "homepage");
 const { Content } = await homePageData.render();
 const { title, description } = homePageData.data;
-
-// const title = 'Home';
 ---
 
-<PrimaryLayout>
+<PrimaryLayout title={title} description={description}>
 	<main>
 		<div class="filler"></div>
 		<article>
 			<Content />
-		</article>			
+		</article>
 	</main>
 </PrimaryLayout>
 
